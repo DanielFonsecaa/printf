@@ -1,4 +1,4 @@
-NAME = libftprintf.a
+NAME = libft.a
 
 SRC_PATH = src
 B_SRC_PATH = b_src
