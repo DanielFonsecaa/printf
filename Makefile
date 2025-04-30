@@ -1,16 +1,22 @@
 NAME = libftprintf.a
 
-SRC_PATH = src
-INC_PATH = include
+SRC_PATH = .
+INC_PATH = .
 BUILD_PATH = .build
 
 SRC = $(addprefix $(SRC_PATH)/, $(FILES))
 OBJS = $(SRC:$(SRC_PATH)/%.c=$(BUILD_PATH)/%.o)
-LIBFT_PATH = libft
-LIBFT = $(LIBFT_PATH)/libft.a
+#LIBFT_PATH = libft
+#LIBFT = $(LIBFT_PATH)/libft.a
 
 FILES = ft_printf.c
-#FILES +=
+FILES += ft_putchar.c
+FILES += ft_putstr.c
+FILES += ft_putnbr.c
+FILES += ft_putunsint.c
+FILES += ft_puthex_small.c
+FILES += ft_puthex_big.c
+FILES += ft_putpoint.c
 
 CC = cc
 
@@ -23,11 +29,13 @@ AR = ar rcs
 MKDIR = mkdir -p
 
 
-all: $(LIBFT) $(BUILD_PATH) $(NAME)
+#all: $(LIBFT) $(BUILD_PATH) $(NAME)
 
-$(LIBFT): 
-	make -C $(LIBFT_PATH)
-	make bonus -C $(LIBFT_PATH)
+#$(LIBFT): 
+#	make -C $(LIBFT_PATH)
+#	make bonus -C $(LIBFT_PATH)
+
+all: $(BUILD_PATH) $(NAME)
 
 $(NAME) : $(OBJS)
 	$(AR) $(NAME) $(OBJS)
@@ -42,12 +50,12 @@ $(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
 
 clean:
 	$(RM) $(BUILD_PATH)
-	make clean -C $(LIBFT_PATH)
+#	make clean -C $(LIBFT_PATH)
 
 fclean: clean
 	$(RM) $(NAME)
-	make fclean -C $(LIBFT_PATH)
+#	make fclean -C $(LIBFT_PATH)
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
