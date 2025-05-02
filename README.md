@@ -12,6 +12,13 @@
 
 This project involves the creation of a `printf` function that mimics the behavior of the standard C library's `printf`, but is fully implemented from scratch. It supports the majority of the common format specifiers such as `%d`, `%i`, `%u` `%s`, `%c`, `%x`, `%X`, `%p` and `%%`. The goal is to understand variadic functions and gain deeper experience with C string handling.
 
+<div align="center">
+  
+| Grade                                                             | Evaluation Information           |
+| :---------------------------------------------------------------- | :------------------------------- |
+| <img src="https://img.shields.io/badge/125%20%2F%20125%20%E2%98%85-sucess"/>  | `3 peers` `30 mins` `moulinette` |
+</div>
+
 ## ✨ Features
 
 - Handles various format specifiers, including:
